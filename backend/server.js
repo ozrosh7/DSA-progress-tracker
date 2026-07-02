@@ -22,12 +22,12 @@ app.use('/api/ai', aiRoutes);
 
 // Health check
 app.get('/', (req, res) => {
-    res.json({ message: 'DevLog API running' });
+    res.json({ message: 'Tracode API running' });
 });
 
 // Connect to MongoDB and start server
 const PORT = process.env.PORT || 5000;
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/devlog';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/tracode';
 
 mongoose.connect(MONGO_URI)
     .then(() => {
